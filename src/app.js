@@ -21,18 +21,18 @@ hbs.registerPartials(partialsPath);
 app.use(express.static(publicDirectoryPath));
 
 app.get("", (req, res) => {
-  res.render("index", { title: "Weather", name: "Mike" });
+  res.render("index", { title: "Weather", name: "Mike Taylor" });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About Me", name: "Mike" });
+  res.render("about", { title: "About Me", name: "Mike Taylor" });
 });
 
 app.get("/help", (req, res) => [
   res.render("help", {
     paragraph: "It's already too late",
     title: "Help",
-    name: "Mike"
+    name: "Mike Taylor"
   })
 ]);
 
@@ -82,12 +82,12 @@ app.get("/help/*", (req, res) => {
   res.render("404", {
     error: "Help article not found",
     title: "404",
-    name: "Mike"
+    name: "Mike Taylor"
   });
 });
 
 app.get("*", (req, res) => {
-  res.render("404", { error: "Page Not Found", title: "404", name: "Mike" });
+  res.render("404", { error: "Page Not Found", title: "404", name: "Mike Taylor" });
 });
 
 app.listen(port, () => {
